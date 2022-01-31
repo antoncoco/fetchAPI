@@ -1,0 +1,82 @@
+:root{
+  --button-bgcolor: rgb(18, 149, 201);
+  --card__text-bgcolor: ghostwhite;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title{
+  margin: 0;
+  text-align: center;
+  color: aliceblue;
+  background-color: darkred;
+  padding: 5px 0;
+  font-size: 3.2vh;
+}
+
+.card{
+  margin: 15px auto;
+  outline: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% - 5vw);
+  border-radius: 10px;
+}
+
+.card__image,
+.card__text{
+  width: 100%;
+  margin: 0;
+  border-radius: 10px 10px 0 0;
+}
+
+.card__text{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  background-color: var(--card__text-bgcolor);
+  border-radius: 0 0 10px 10px;
+}
+
+.card__text--loading{
+  font-family: 'Courier New', Courier, monospace;
+  animation: loading 1s infinite alternate;
+}
+
+@keyframes loading {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.card__text::before,
+.card__text::after{
+  content: "";
+  flex: 0 0 15px;
+}
+
+.button{
+  display: block;
+  border-style: none;
+  margin: 0 auto;
+  cursor: pointer;
+  background-color: var(--button-bgcolor);
+  font-size: 2vh;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+}
+
+.button:hover{
+  transform: scale(1.1);
+}
+
+
