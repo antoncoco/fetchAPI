@@ -1,6 +1,8 @@
 :root{
   --button-bgcolor: rgb(18, 149, 201);
   --card__text-bgcolor: ghostwhite;
+  --title-fontsize: min(1.8em, max(1em, 3.2vmax));
+  --button-fontsize: 1em;
 }
 
 body{
@@ -15,7 +17,7 @@ body{
   color: aliceblue;
   background-color: darkred;
   padding: 5px 0;
-  font-size: 3.2vh;
+  font-size: var(--title-fontsize);
 }
 
 .card{
@@ -25,6 +27,7 @@ body{
   flex-direction: column;
   align-items: center;
   width: calc(100% - 5vw);
+  max-width: 750px;
   border-radius: 10px;
 }
 
@@ -66,10 +69,10 @@ body{
 .button{
   display: block;
   border-style: none;
-  margin: 0 auto;
+  margin: 0 auto 15px;
   cursor: pointer;
   background-color: var(--button-bgcolor);
-  font-size: 2vh;
+  font-size: var(--button-fontsize);
   border-radius: 5px;
   padding: 10px;
   color: white;
